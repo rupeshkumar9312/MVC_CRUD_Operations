@@ -11,6 +11,7 @@ namespace MVCClassDemo.Models
         public string name { get; set; }
         public string city { get; set; }
         public double salary { get; set; }
+        
     }
 
 

@@ -29,14 +29,17 @@
                 <td>@emp.name</td>
                 <td>@emp.city</td>
                 <td>@emp.salary</td>
-                <td>@Html.ActionLink("Edit","Edit", new { id = emp.id }) </td>
+                <td>@Html.ActionLink("Edit","Edit", new { id = emp.id })</td>
                 <td>@Html.ActionLink("Delete","Delete",new { id = emp.id })</td>
             </tr>
                 
             }
         </table>
-        
-          @Html.ActionLink("Add Employee","Add");
+        <p style="text-align:center">
+
+            @Html.ActionLink("Add Employee", "Add")
+
+        </p>
     </div>
 </body>
 </html>

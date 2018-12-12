@@ -12,23 +12,24 @@ namespace MVCClassDemo.Controllers
         static EmployeeDB empDb = new EmployeeDB();
         public ActionResult Index()
         {
-            Employee emp = new Employee()
-            {
-                id = 101,
-                name = "Sompa",
-                city = "Bokaro",
-                salary = 200.00
+            //Employee emp = new Employee()
+            //{
+            //    id = 101,
+            //    name = "Sompa",
+            //    city = "Bokaro",
+            //    salary = 200.00
 
-            };
+            //};
 
 
             // EmployeeDB employeeDB = new EmployeeDB();
-            empDb.AddEmployee(emp);
-            empDb.AddEmployee(new Employee { id = 102, name = "Champa", city = "saharanpur", salary = 300.00 });
-            System.Diagnostics.Debug.WriteLine(emp);
-            return View(emp);
+            //empDb.AddEmployee(emp);
+            //empDb.AddEmployee(new Employee { id = 102, name = "Champa", city = "saharanpur", salary = 300.00 });
+            //System.Diagnostics.Debug.WriteLine(emp);
+            //return View(emp);
             //List<Employee> empList = employeeDB.GetEmployees();
             //return View(empList);
+            return RedirectToAction("All");
         }
 
 
