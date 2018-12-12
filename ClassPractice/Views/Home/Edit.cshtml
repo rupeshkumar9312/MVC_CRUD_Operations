@@ -1,0 +1,87 @@
+﻿@model MVCClassDemo.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <p><h1 style="text-align:center">Edit Employee</h1></p>
+        <p style="text-align:center">
+
+            @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+            {
+            <table align="center" border="1">
+                <tr>
+                    <th colspan="2" align="center">Employee Details</th>
+                </tr>
+                <tr>
+                    <td>ID </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.id,new { id = "id", @readonly = "readonly" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.name)
+                    </td>
+                </tr>
+                @*<tr>
+            <td>Gender: </td>
+            <td>
+                @Html.DropDownListFor(m => m.Gender, new List<SelectListItem>
+               { new SelectListItem{Text="Male", Value="M"},
+                 new SelectListItem{Text="Female", Value="F"}}, "Please select")
+            </td>
+        </tr>*@
+                <tr>
+                    <td>City </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.city)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salary </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.salary)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+            }
+
+            @*@using (Html.BeginForm())
+        {
+            @Html.EditorForModel()
+        }*@
+            @*@using (Html.BeginForm())
+            {
+                @Html.EditorForModel()
+                <input type="submit" value="Save Changes" />
+            }*@
+
+
+            @*<input id="Text1" type="text" value=@Model.id disabled />
+        <input id="Text1" type="text" value=@Model.name />
+        <input id="Text1" type="text" value=@Model.city />
+        <input id="Text1" type="text" value="@Model.salary" />
+        <button type="submit" value="Save Changes" />*@
+
+            @*<input type="submit" value="Save Changes" onclick="@Html.Action("Update",new { str = "1" })" />*@
+
+
+        </p>
+    </div>
+</body>
+</html>

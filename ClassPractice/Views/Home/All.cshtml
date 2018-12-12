@@ -1,0 +1,42 @@
+﻿@model List<MVCClassDemo.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>All</title>
+</head>
+<body>
+    <div> 
+        <h1 style="text-align:center">Employees List</h1>
+        <table border="1" align="center">
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee City</th>
+                <th>Employee Salary</th>
+                <th></th>
+            </tr>
+            @foreach(var emp in Model)
+            {
+            <tr>
+                <td>@emp.id</td>
+                <td>@emp.name</td>
+                <td>@emp.city</td>
+                <td>@emp.salary</td>
+                <td>@Html.ActionLink("Edit","Edit", new { id = emp.id }) </td>
+                <td>@Html.ActionLink("Delete","Delete",new { id = emp.id })</td>
+            </tr>
+                
+            }
+        </table>
+        
+          @Html.ActionLink("Add Employee","Add");
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model MVCClassDemo.Models.Employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+
+        <p><h1 style="text-align:center">Add Employee</h1></p>
+        @using (Html.BeginForm("AddEmployee", "Home", FormMethod.Post))
+        {
+        <table border="1" align="center">
+            <tr>
+                <td>Employee ID</td>
+                <td>@Html.TextBoxFor(m => m.id)</td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td>@Html.TextBoxFor(m => m.name)</td>
+            </tr>
+            <tr>
+                <td>Employee City</td>
+                <td>@Html.TextBoxFor(m => m.city)</td>
+            </tr>
+            <tr>
+                <td>Employee Salary</td>
+                <td>@Html.TextBoxFor(m => m.salary)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Add Employee" />
+                </td>
+            </tr>
+        </table>
+
+        }
+    </div>
+</body>
+</html>
